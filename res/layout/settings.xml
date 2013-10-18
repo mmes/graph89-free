@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:seek="com.graph89.controls.SeekBarPreference"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <PreferenceCategory
+        android:key="CONFIG_TITLE"
+        android:title="" >
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Keypress Feedback" >
+
+        <com.graph89.controls.SeekBarPreference
+            android:defaultValue="10"
+            android:dialogTitle="Set duration"
+            android:key="CONF_HAPTIC_FEEDBACK"
+            android:persistent="true"
+            android:summary="Key vibration"
+            android:title="Haptic Feedback"
+            seek:maxValue="30"
+            seek:minValue="0" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="CONF_AUDIO_FEEDBACK"
+            android:summary="Make a click sound on key press"
+            android:title="Acoustic Feedback" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="CONFIG_CAT_DISPLAY_SETTINGS"
+        android:title="Display Settings" >
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="CONF_ZOOM_MODE"
+            android:summary="Stretch the skin to fill the whole screen"
+            android:title="Zoom Mode" />
+
+        <com.graph89.controls.SeekBarPreference
+            android:defaultValue="1"
+            android:dialogTitle="Screen Scale"
+            android:key="CONF_SCREENSCALE"
+            android:persistent="true"
+            android:summary="Adjust the size of the emulated screen on Portrait mode"
+            android:title="Screen Scale"
+            seek:maxValue="1"
+            seek:minValue="1" />
+        
+
+
+
+        <ListPreference
+            android:defaultValue="Default"
+            android:entries="@array/skin89Array"
+            android:entryValues="@array/skin89Values"
+            android:key="CONF_SKIN"
+            android:title="Skin" />
+
+
+    
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Emulation Settings" >
+
+        <com.graph89.controls.SeekBarPreference
+            android:defaultValue="5"
+            android:dialogTitle="Turn off the Emulator"
+            android:key="CONF_AUTO_OFF"
+            android:persistent="true"
+            android:summary="Turn off the emulator after an interval of inactivity"
+            android:title="Auto Off"
+            seek:maxValue="31"
+            seek:minValue="3" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="CONF_OFF_ON_SCREENOFF"
+            android:summary="Exit app when the calculator is turned off by [2nd] [ON]"
+            android:title="Exit on Screen Off" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="CONF_SAVE_STATE"
+            android:summary="Save the emulator state before exiting the app"
+            android:title="Save State on exit" />
+
+           </PreferenceCategory>
+
+</PreferenceScreen>

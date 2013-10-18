@@ -1,0 +1,9 @@
+<resources>
+
+    <string-array name="calctypeArray">
+        <item>-Select Type-</item>
+        <item>TI89</item>
+        <item>TI89 Titanium</item>
+    </string-array>
+
+</resources>
